@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman';
+}
+
+h1 {
+    padding: 10px;
+    width: 100vw;
+    text-align: center;
+    background-color: rgb(65, 10, 65);
+    color: gold;
+    margin-bottom: 20px;
+}
