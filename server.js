@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
-app.use(express.static('public'))
+//app.use(express.static('public'))
 
 //Rollbar goes here
 
@@ -24,7 +24,7 @@ app.use(express.json())
 
 //app.get from api goes here
 
-const port = process.env.Port || 3000
+const port = process.env.PORT || 3000
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
