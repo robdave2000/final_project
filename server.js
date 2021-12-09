@@ -20,6 +20,8 @@ app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.js'))
 })
 
+app.use(express.json())
+
 //app.get from api goes here
 
 const port = process.env.Port || 3000
