@@ -2,13 +2,21 @@
     padding: 0;
     margin: 0;
     font-family:'Times New Roman';
+    background-color: black;
 }
 
 h1 {
     padding: 10px;
     width: 100vw;
     text-align: center;
-    background-color: rgb(65, 10, 65);
-    color: gold;
+    background-color: red;
+    color: rgb(182, 174, 174);
     margin-bottom: 20px;
+}
+
+#menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    size: 100px;
 }
