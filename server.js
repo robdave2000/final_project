@@ -6,6 +6,12 @@ const app = express()
 
 //Rollbar goes here
 
+app.get('/', (req, res) => {
+    //rollbar.info('Someone visited our site')
+
+    res.sendFile(path.join(__dirname, 'public/home.html'))
+})
+
 app.get('/home.html', (req, res) => {
     //rollbar.info('Someone visited our site')
 
