@@ -89,8 +89,18 @@ h1 {
     padding-top: 10px;
 }
 
-#item_search {
-    position: fixed;
-    top: 7vw;
-    left: 40vw;
+form {
+    position: relative;
+    top: 0vw;
+    left: 45vw;
+}
+
+#search_text {
+    background-color: white;
+    color: black;
+}
+
+#search_button {
+    background-color: white;
+    color: black;
 }
