@@ -26,6 +26,7 @@ h1 {
     border: transparent;
     text-align: left;
     padding-left: 10px;
+    padding-top: 10px;
 }
 
 #search {
@@ -40,4 +41,56 @@ h1 {
     border: transparent;
     text-align: right;
     padding-right: 10px;
+    padding-top: 10px;
+}
+
+#menu_page {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 40vw;
+    height: 100vw;
+    background-color: grey;
+    color: black;
+    font-size: 30px;
+    border: transparent;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#menu_home {
+    position: fixed;
+    top: 10vw;
+    left: 0px;
+    width: 20vw;
+    height: 58px;
+    background-color: transparent;
+    color: black;
+    font-size: 30px;
+    border: transparent;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#menu_search {
+    position: fixed;
+    top: 20vw;
+    left: 0px;
+    width: 20vw;
+    height: 58px;
+    background-color: transparent;
+    color: black;
+    font-size: 30px;
+    border: transparent;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#item_search {
+    position: fixed;
+    top: 7vw;
+    left: 40vw;
 }

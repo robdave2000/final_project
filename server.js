@@ -6,10 +6,22 @@ const app = express()
 
 //Rollbar goes here
 
-app.get('/', (req, res) => {
+app.get('/home.html', (req, res) => {
     //rollbar.info('Someone visited our site')
 
-    res.sendFile(path.join(__dirname, 'public/index.html'))
+    res.sendFile(path.join(__dirname, 'public/home.html'))
+})
+
+app.get('/menu.html', (req, res) => {
+    //rollbar.info('Someone visited our site')
+
+    res.sendFile(path.join(__dirname, 'public/menu.html'))
+})
+
+app.get('/search.html', (req, res) => {
+    //rollbar.info('Someone visited our site')
+
+    res.sendFile(path.join(__dirname, 'public/search.html'))
 })
 
 app.get('/styles', (req, res) => {
@@ -17,7 +29,15 @@ app.get('/styles', (req, res) => {
 })
 
 app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.js'))
+    res.sendFile(path.join(__dirname, 'public/home.js'))
+})
+
+app.get('/menu.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/menu.js'))
+})
+
+app.get('/search.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/search.js'))
 })
 
 app.use(express.json())
