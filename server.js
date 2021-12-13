@@ -1,5 +1,7 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
+const cors = require('cors')
 const app = express()
 
 //app.use(express.static('public'))
@@ -49,6 +51,8 @@ app.get('/search.js', (req, res) => {
 app.use(express.json())
 
 //app.get from api goes here
+
+// app.get('https://db.ygoprodeck.com/api/v7/cardsets.php')
 
 const port = process.env.PORT || 3000
 
