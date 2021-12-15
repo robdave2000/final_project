@@ -46,6 +46,11 @@ app.post('/deck', (req, res) => {
     res.sendStatus(200)
 })
 
+app.get('/deck', (req, res) => {
+    // res.sendFile(path.join(__dirname, '/db.json'))
+    res.status(200).send(db)
+})
+
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {

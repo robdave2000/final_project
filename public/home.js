@@ -1,5 +1,7 @@
 const cardsContainer = document.querySelector('#card_view')
 
+const errCallBack = err => console.log(err)
+
 console.log('Heloo Wolrd');
 
 const getDeckCards = () => axios.get("/deck")
@@ -9,7 +11,7 @@ const getDeckCards = () => axios.get("/deck")
         createCard(element)
     });
 })
-.catch(err)
+.catch(errCallBack)
 
 const createCard = (cardObj) => {
     const displayCard = document.createElement('div')
