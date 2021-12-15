@@ -2,33 +2,22 @@ require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const cors = require('cors')
+const db = require('./db.json')
 const app = express()
 
-//app.use(express.static('public'))
-
-//Rollbar goes here
-
 app.get('/', (req, res) => {
-    //rollbar.info('Someone visited our site')
-
     res.sendFile(path.join(__dirname, 'public/home.html'))
 })
 
 app.get('/home.html', (req, res) => {
-    //rollbar.info('Someone visited our site')
-
     res.sendFile(path.join(__dirname, 'public/home.html'))
 })
 
 app.get('/menu.html', (req, res) => {
-    //rollbar.info('Someone visited our site')
-
     res.sendFile(path.join(__dirname, 'public/menu.html'))
 })
 
 app.get('/search.html', (req, res) => {
-    //rollbar.info('Someone visited our site')
-
     res.sendFile(path.join(__dirname, 'public/search.html'))
 })
 
@@ -51,8 +40,9 @@ app.get('/search.js', (req, res) => {
 app.use(express.json())
 
 //app.get from api goes here
-
-// app.get('https://db.ygoprodeck.com/api/v7/cardsets.php')
+app.post('/deck', (req, res) => {
+    console.log(req.body)
+})
 
 const port = process.env.PORT || 3000
 

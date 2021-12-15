@@ -18,10 +18,16 @@
     </nav>
     
     <form id="item_search">
-        <input id="search_text" type="text">
-        <button id="search_button" type="button" onclick="getCardInfo()">Enter</button>
+        <button id="search_button" type="button" onclick="getAllCards()">Summon Cards</button>
     </form>
 
+    <section id="card_view">
+    </section>
+
+    <button onclick="viewPrevCards()">PREV</button>
+    <button onclick="viewNextCards()">NEXT</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/search.js"></script>
 </body>
 </html>

@@ -104,3 +104,12 @@ form {
     background-color: white;
     color: black;
 }
+
+button {
+    background-color: white;
+    color: black;
+}
+
+#card_view {
+    color: gold;
+}
