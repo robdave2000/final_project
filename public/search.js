@@ -28,16 +28,25 @@ const createCard = (cardObj) => {
 
 function addCard (evt)
 {
-    console.log(evt.target)
-    //  axios.post('/deck', cardObj)
-    // .then((res) => {
-    //     let newCard = {
-    //         name: cardObj.name,
-    //         image_url: cardObj.card_images[0].image_url
-    //     }
-    //     deckCards.push(newCard)
-    // })
-    // .catch(errCallBack)
+    console.log(evt.target.getAttribute("name"))
+
+    axios.get(baseUrl + `?id=${evt.target.getAttribute("name")}`)
+    .then((info) => {
+
+        let newCard = {
+            name: info.data.data[0].name,
+            image_url: info.data.data[0].card_images[0].image_url
+        }
+
+        axios.post('/deck', newCard)
+        .then(() => {
+        alert("Card added")
+        })
+        .catch(errCallBack)
+    })
+    .catch(errCallBack)
+
+    
 }
 
 const getAllCards = (offSet) => axios.get(baseUrl + `?num=8&offset=${offSet}`)
@@ -47,10 +56,12 @@ const getAllCards = (offSet) => axios.get(baseUrl + `?num=8&offset=${offSet}`)
             console.log(element)
             createCard(element)
 
-            document.querySelectorAll('.add_card_button').forEach(buttonEl => {
-                buttonEl.addEventListener('click', addCard())
-            })
+            
         });
+
+        document.querySelectorAll('.add_card_button').forEach(buttonEl => {
+            buttonEl.addEventListener('click', addCard)
+        })
     })
     .catch(errCallBack)
 // const deleteCard = () =>

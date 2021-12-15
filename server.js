@@ -41,7 +41,9 @@ app.use(express.json())
 
 //app.get from api goes here
 app.post('/deck', (req, res) => {
-    console.log(req.body)
+    db.push(req.body)
+
+    res.sendStatus(200)
 })
 
 const port = process.env.PORT || 3000
